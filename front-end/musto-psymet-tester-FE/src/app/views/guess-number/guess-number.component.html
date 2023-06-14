@@ -1,0 +1,17 @@
+<h1>Guess The Number 😋</h1>
+<h2>{{numberToGuess}}</h2>
+<hr>
+<section class="container">
+  <article class="grid-area--left">
+    <form [formGroup]="formGroupEl">
+      <label for="input-number">Number:</label>
+      <input type="number" formControlName="inputNumber" id="input-number">
+    </form>
+    <button type="button" (click)="onClickGuess()">GUESS</button>
+  </article>
+  <article class="grid-area--right">
+    <h2>{{feedback}}</h2>
+    <p>Score: <span>{{userScore}}</span></p>
+    <p>High Score: <span>{{highScore}}</span></p>
+  </article>
+</section>
